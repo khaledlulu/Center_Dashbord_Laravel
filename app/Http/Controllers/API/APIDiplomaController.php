@@ -54,7 +54,6 @@ class APIDiplomaController extends Controller
             $diplomas->currancy = $request->get('currancy');
             $diplomas->number_of_studants = $request->get('number_of_studants');
             $diplomas->status = $request->get('status');
-            $diplomas->tranning_type = $request->get('tranning_type');
             $diplomas->room_id = $request->get('room_id');
             $diplomas->description = $request->get('description');
             $isSaved = $diplomas->save();
@@ -121,7 +120,6 @@ class APIDiplomaController extends Controller
             $diplomas->currancy = $request->get('currancy');
             $diplomas->number_of_studants = $request->get('number_of_studants');
             $diplomas->status = $request->get('status');
-            $diplomas->tranning_type = $request->get('tranning_type');
             $diplomas->room_id = $request->get('room_id');
             $diplomas->description = $request->get('description');
             $isUpdate = $diplomas->save();

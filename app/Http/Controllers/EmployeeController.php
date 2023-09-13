@@ -75,6 +75,7 @@ class EmployeeController extends Controller
                 $users->date_of_brith = $request->get("date_of_brith");
                 $users->speciality = $request->get("speciality");
                 $users->salary_value = $request->get("salary_value");
+                $users->salary_type = $request->get("salary_type");
                 $users->currancy = $request->get("currancy");
                 $users->certification = $request->get("certification");
                 $users->job_title = $request->get("job_title");
@@ -158,6 +159,7 @@ class EmployeeController extends Controller
                 $users->date_of_brith = $request->get("date_of_brith");
                 $users->speciality = $request->get("speciality");
                 $users->salary_value = $request->get("salary_value");
+                $users->salary_type = $request->get("salary_type");
                 $users->currancy = $request->get("currancy");
                 $users->certification = $request->get("certification");
                 $users->job_title = $request->get("job_title");

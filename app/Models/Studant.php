@@ -21,4 +21,14 @@ class Studant extends Authenticatable
     {
         return $this->belongsTo(City::class);
     }
+
+    public function getFullNameAttribute()
+    {
+        return $this->user->first_name . ' ' . $this->user->last_name;
+    }
+
+    public function getImagesAttribute()
+    {
+        return $this->studants->image;
+    }
 }

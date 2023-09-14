@@ -175,10 +175,11 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
-                <img src="{{ asset('dashbord/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
+            <a href="{{ route('Home') }}" class="brand-link">
+                <img src="{{ asset('dashbord/dist/img/p.png') }}"
+                alt="Professional Programming Center"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">AdminLTE 3</span>
+                <span class="brand-text font-weight-light">PPC </span>
             </a>
 
             <!-- Sidebar -->
@@ -186,22 +187,26 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        {{-- @if(auth('admin')->check())
-                        {{ asset('/storage/images/admin/'.auth('admin')->user()->images) }}
+                        <img src="
+                        @if(auth('admin')->check())
+                        {{ asset('/storage/images/admin/'.auth('admin')->user()->image) }}
                     @elseif(auth('employee')->check())
-                        {{ asset('/storage/images/employee/'.auth('employee')->user()->images) }}
+                        {{ asset('/storage/images/employee/'.auth('employee')->user()->image) }}
                     @elseif(auth('studant')->check())
-                        {{ asset('/storage/images/studant/'.auth('studant')->user()->images) }}
-                    @endif --}}
-                        <img src="{{ asset('dashbord/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2"
+                        {{ asset('/storage/images/studant/'.auth('studant')->user()->image) }}
+                    @endif
+                        " class="img-size-32 img-circle elevation-2"
                             alt="User Image">
                     </div>
                     <div class="info">
-                        {{-- @if(auth('admin')->check())  Admin : {{ auth('admin')->user()->first_name.' '.auth('admin')->user()->last_name }}
-                        @elseif (auth('employee')->check())  Employee : {{ auth('employee')->user()->first_name.' '.auth('employee')->user()->last_name }}
-                        @elseif (auth('studant')->check())  Studant : {{ auth('studant')->user()->first_name.' '.auth('studant')->user()->last_name }}
-                        @endif --}}
-                        <a href="#" class="d-block">Alexander Pierce</a>
+
+
+                        <a href="{{ route('editprofile.dashbord') }}" class="d-block">
+                            @if(auth('admin')->check())  Admin : {{ auth('admin')->user()->full_name }}
+                            @elseif (auth('employee')->check())  Employee : {{ auth('employee')->user()->full_name }}
+                            @elseif (auth('studant')->check())  Studant : {{ auth('studant')->user()->full_name}}
+                                    @endif
+                        </a>
                     </div>
                 </div>
 

@@ -25,4 +25,14 @@ class Admin extends Authenticatable
         'created_at',
         'updated_at',
     ];
+
+    public function getFullNameAttribute()
+    {
+        return $this->user->first_name . ' ' . $this->user->last_name;
+    }
+
+    public function getImagesAttribute()
+    {
+        return $this->admin->image;
+    }
 }
